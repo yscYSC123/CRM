@@ -156,8 +156,8 @@ public class CustomerServeService extends BaseService<CustomerServe, Integer> {
             AssertUtil.isTrue(userMapper.selectByPrimaryKey(Integer.parseInt(customerServe.getAssigner())) == null, "待分配用户不存在！");
             // 分配时间     系统当前时间
             customerServe.setAssignTime(new Date());
-            // 服务状态      设置为 服务归档状态 fw_003
-            customerServe.setState(CustomerServeStatus.PROCED.getState());
+            // 服务更新时间
+            customerServe.setUpdateDate(new Date());
 
         } else if (CustomerServeStatus.PROCED.getState().equals(customerServe.getState())) {
             // 服务处理操作
@@ -165,8 +165,8 @@ public class CustomerServeService extends BaseService<CustomerServe, Integer> {
             AssertUtil.isTrue(StringUtils.isBlank(customerServe.getServiceProce()), "服务处理内容不能为空！");
             // 服务处理时间   系统当前时间
             customerServe.setServiceProceTime(new Date());
-            // 服务状态      设置为 服务归档状态 fw_004
-            customerServe.setState(CustomerServeStatus.FEED_BACK.getState());
+            // 服务更新时间
+            customerServe.setUpdateDate(new Date());
 
         } else if (CustomerServeStatus.FEED_BACK.getState().equals(customerServe.getState())) {
             // 服务反馈操作
@@ -186,8 +186,4 @@ public class CustomerServeService extends BaseService<CustomerServe, Integer> {
         AssertUtil.isTrue(customerServeMapper.updateByPrimaryKeySelective(customerServe)< 1, "服务更新失败！");
 
     }
-
-    public void assignCustomerServe(Integer[] ids) {
-    }
-
 }

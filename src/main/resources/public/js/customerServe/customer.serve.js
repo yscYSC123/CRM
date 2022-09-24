@@ -50,9 +50,6 @@ layui.use(['table','layer',"form"],function(){
             // 打开添加服务信息的对话框
             openAddCustomerServeDialog();
 
-        }else if (data.event == "ass"){
-            //分配服务
-            assignCustomerServeDialog();
         }
 
     });
@@ -79,12 +76,7 @@ layui.use(['table','layer',"form"],function(){
         });
     }
 
-    /**
-     * 分配服务
-     */
-    function assignCustomerServeDialog(data){
 
-    }
 
 
 

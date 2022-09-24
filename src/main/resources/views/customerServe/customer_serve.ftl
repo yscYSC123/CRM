@@ -38,10 +38,6 @@
             <i class="layui-icon">&#xe608;</i>
             添加
         </a>
-        <a class="layui-btn layui-btn-normal addNews_btn" lay-event="ass">
-            <i class="layui-icon">&#xe608;</i>
-            分配
-        </a>
     </script>
 
 </form>

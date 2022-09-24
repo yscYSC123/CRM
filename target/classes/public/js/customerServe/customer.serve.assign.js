@@ -6,7 +6,7 @@ layui.use(['table','layer',"form"],function(){
     //服务列表展示
     table.render({
         elem: '#customerServeList',
-        url : ctx+'/customer_serve/list?state=fw_002',
+        url : ctx+'/customer_serve/list?state=fw_001',
         cellMinWidth : 95,
         page : true,
         height : "full-125",

@@ -221,18 +221,4 @@
     </where>
   </select>
 
-  <!-- 批量分配 -->
-  <update id="assignBatch">
-    update
-    t_customer_serve
-    set
-    state = fw_002
-    where
-    id
-    in
-    <foreach collection="array" separator="," open="(" close=")" item="id">
-      #{id}
-    </foreach>
-  </update>
-
 </mapper>

@@ -17,7 +17,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
-
 @RequestMapping("customer_serve")
 @Controller
 public class CustomerServeController extends BaseController {
@@ -45,7 +44,6 @@ public class CustomerServeController extends BaseController {
 
         return customerServeService.queryCustomerServeByParams(customerServeQuery);
     }
-
 
     /**
      * 通过不同的类型进入不同的服务页面
@@ -91,7 +89,6 @@ public class CustomerServeController extends BaseController {
         }
     }
 
-
     /**
      * 打开创建服务页面
      *
@@ -102,7 +99,6 @@ public class CustomerServeController extends BaseController {
     public String toAddCustomerServePage() {
         return "customerServe/customer_serve_add";
     }
-
 
     /**
      * 创建服务
@@ -132,7 +128,6 @@ public class CustomerServeController extends BaseController {
         customerServeService.updateCustomerServe(customerServe);
         return success("服务更新成功！");
     }
-
 
     /**
      * 打开服务分配页面
